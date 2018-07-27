@@ -2,23 +2,26 @@ package com.theletterandrew;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Scanner;
 
 
 public class Game {
-
-		private int gamesWon;
-		private int gamesLost;
+		private boolean playing;
 
 		public Game(){
-				this.gamesWon = 0;
-				this.gamesLost = 0;
+				this.playing = true;
+				ArrayList deck = getDeck();
+		}
+
+		public boolean isPlaying() {
+				return playing;
 		}
 
 		public ArrayList getDeck(){
 				ArrayList deck = new ArrayList();
 
-				for (Suit s: Suit.values()) {
-						for (Face f: Face.values()) {
+				for (Enums.Suit s: Enums.Suit.values()) {
+						for (Enums.Face f: Enums.Face.values()) {
 							deck.add(new Card(s.getId(), f.getId(), f.getValue()));
 						}
 				}
@@ -28,49 +31,17 @@ public class Game {
 				return deck;
 		}
 
-		public enum Suit {
-				HEARTS("h"), DIAMONDS("d"), CLUBS("c"), SPADES("s");
+		public void dealCards(){
 
-				private final String id;
-
-				Suit(String id){
-						this.id = id;
-				}
-
-				public String getId() {
-						return id;
-				}
 		}
 
-		public enum Face {
-				TWO("2", 2),
-				THREE("3", 3),
-				FOUR("4", 4),
-				FIVE("5", 5),
-				SIX("6", 6),
-				SEVEN("7", 7),
-				EIGHT("8", 8),
-				NINE("9", 9),
-				TEN("T", 10),
-				JACK("J", 10),
-				QUEEN("Q", 10),
-				KING("K", 10),
-				ACE("A", 11);
+		public void hitOrStay(){
+				Scanner scan = new Scanner(System.in);
+				System.out.println("Would you like to hit or stay? (h/s)");
+				String userInput = scan.next();
 
-				private final String id;
-				private int value;
-
-				Face(String id, int value){
-						this.id = id;
-						this.value = value;
-				}
-
-				public String getId(){
-						return id;
-				}
-
-				public int getValue() {
-						return value;
+				if(userInput == "h"){
+						// Do something;
 				}
 		}
 }
