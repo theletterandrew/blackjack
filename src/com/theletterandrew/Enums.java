@@ -2,7 +2,7 @@ package com.theletterandrew;
 
 public class Enums {
 		public enum Suit {
-				HEARTS("h"), DIAMONDS("d"), CLUBS("c"), SPADES("s");
+				HEARTS("Hearts"), DIAMONDS("Diamonds"), CLUBS("Clubs"), SPADES("Spades");
 
 				private final String id;
 
@@ -24,11 +24,11 @@ public class Enums {
 				SEVEN("7", 7),
 				EIGHT("8", 8),
 				NINE("9", 9),
-				TEN("T", 10),
-				JACK("J", 10),
-				QUEEN("Q", 10),
-				KING("K", 10),
-				ACE("A", 11);
+				TEN("Ten", 10),
+				JACK("Jack", 10),
+				QUEEN("Queen", 10),
+				KING("King", 10),
+				ACE("Ace", 11);
 
 				private final String id;
 				private int value;
