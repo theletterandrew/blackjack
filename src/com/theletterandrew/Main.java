@@ -8,8 +8,7 @@ public class Main {
 				Hand dealerHand = new Hand();
 				User user = new User();
 				Computer dealer = new Computer();
-
-				// BUG: While loop doesn't end- playing variable of user class may not be updating.
+				
 				while(user.isPlaying()){
 
 						Deck deck = new Deck();

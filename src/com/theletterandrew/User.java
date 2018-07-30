@@ -23,7 +23,7 @@ public class User {
 				System.out.print("Would you like to hit or stay? (h/s): ");
 				String response = scan.next();
 
-				if(response == "h"){
+				if(response.equals("h")){
 						return true;
 				}
 				return false;
@@ -32,9 +32,8 @@ public class User {
 		private void playAgain(){
 				System.out.print("Wanna play again? (y/n): ");
 				String response = scan.next();
-				if (response == "n"){
+				if (response.equals("n")){
 						this.playing = false;
-						// BUG: may not be changing value of playing??
 				}
 		}
 
